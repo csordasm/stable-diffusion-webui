@@ -3,12 +3,13 @@ on:
   push:
     branches:
       - main
+      - ci-workflow
     tags:
       - 'v*'
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ github.repository }}/stable-diffusion-webui
+  IMAGE_NAME: panpanpeter/stable-diffusion-webui
 
 jobs:
   publish:
